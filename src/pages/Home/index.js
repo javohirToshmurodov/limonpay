@@ -4,7 +4,7 @@ import phone from "../../assets/images/iphone.svg"
 import dots from "../../assets/images/dot.svg"
 import halfcircle from "../../assets/images/halfcircle.svg"
 import { images } from '../../assets/images'
-import { CardWrapper, PaymentCard, PaymentMiniCards } from '../../styles'
+import { AppStoreCard, AppStoreLayer, CardWrapper, DefaultH2, LimonCards, PaymentCard, PaymentMiniCards } from '../../styles'
 import LimonLayer from '../../components/Limonlayer'
 import { CurrencyCard } from '../../styles'
 import uzb from "../../assets/images/uzb.svg"
@@ -13,19 +13,29 @@ import Exchange from '../../components/Exchange'
 import bank1 from "../../assets/images/banknote.svg"
 import bank2 from "../../assets/images/banknote2.svg"
 import { countries } from '../../assets/images'
-import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai"
+import { AiFillApple, AiFillStar, AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai"
 import PayButton from '../../components/PaymentButton'
 import { IoIosWater } from "react-icons/io"
 import { GiElectric, GiWarpPipe } from "react-icons/gi"
 import { RiFireFill, RiGlobalLine } from "react-icons/ri"
 import { HiOutlineTicket } from "react-icons/hi"
 import earth from "../../assets/images/earth.svg"
-import { FaGamepad, FaProjectDiagram, FaTrash, FaTv, FaUmbrella } from 'react-icons/fa'
-import Form from 'react-bootstrap/Form';
+import { FaGamepad, FaGooglePlay, FaProjectDiagram, FaTrash, FaTv, FaUmbrella } from 'react-icons/fa'
 import FormButton from '../../components/FormButton'
 import CategoryCard from '../../components/CategoryCard'
+import dotss from "../../assets/images/dotss.svg"
+import appstore from "../../assets/images/appstore.svg"
+import google from "../../assets/images/googleplay.svg"
+import subs from "../../assets/images/substracttsvg.svg"
+import iphone2 from "../../assets/images/iphone2.svg"
+import { cardimages } from '../../assets/images'
+import card1 from "../../assets/images/card1.svg"
+import Partners from '../../components/Partners'
+import Footer from '../../components/Footer'
+import bank from "../../assets/images/bank.svg"
 const Home = () => {
    const { One, Two, Three } = images
+   const { Card1, Card2, Card3, Card4 } = cardimages
    const { Usd,
       Eur,
       Jap,
@@ -48,7 +58,6 @@ const Home = () => {
          title: "Мониторинг",
          description: "Мы — онлайн-экосистема, основанная на финансовых и лайфстайл-услугах. Клиентами LimonPay стали 19 млн человек по всей Узбекистана."
       },
-
    ]
    const categories = [
       {
@@ -76,6 +85,40 @@ const Home = () => {
          title: "Авиа- и ЖД-билеты"
       },
    ]
+   const paymentcards = [
+      {
+         image: `${Card1}`,
+         title: "LimonPay теперь также осуществляет денежн...",
+         desc: "Сеть UnionPay менее развита в Европе, чем Visa и Mastercard. На практике ее карты могут прини...",
+         date: "23 Января, 2022"
+      },
+      {
+         image: `${Card2}`,
+         title: "В Uzcard сменились учредители – Газета.uz",
+         desc: "Сеть UnionPay менее развита в Европе, чем Visa и Mastercard. На практике ее карты могут прини...",
+         date: "23 Января, 2022"
+      },
+      {
+         image: `${Card3}`,
+         title: "LimonPay теперь также осуществляет денежн...",
+         desc: "Сеть UnionPay менее развита в Европе, чем Visa и Mastercard. На практике ее карты могут прини...",
+         date: "23 Января, 2022"
+      },
+      {
+         image: `${Card4}`,
+         title: "Агробанк» объявил о разработке кобейджин...",
+         desc: "Сеть UnionPay менее развита в Европе, чем Visa и Mastercard. На практике ее карты могут прини...",
+         date: "23 Января, 2022"
+      },
+
+   ]
+
+   const appClick = () => {
+      window.open("https://www.apple.com/ru/app-store/")
+   }
+   const googleClick = () => {
+      window.open("https://play.google.com/store/games?hl=ru&gl=US")
+   }
    return (
       <>
          <div className='homebackground' style={{
@@ -164,14 +207,21 @@ const Home = () => {
 
          <div className="bg-white py-5">
             <div className="container">
-               <h2 style={{
-                  "color": "#17171C",
-                  "fontWeight": "700",
-                  "lineHeight": "33px",
-                  "fontSize": "24px"
+               <div className="d-flex justify-content-between flex-wrap ">
+                  <div>
+                     <h2 style={{
+                        "color": "#17171C",
+                        "fontWeight": "700",
+                        "lineHeight": "33px",
+                        "fontSize": "24px"
 
-               }} className={"marginlefth1"}>Курс валют</h2>
-
+                     }} className={"marginlefth1"}>Курс валют</h2>
+                  </div>
+                  <div className="d-flex align-items-center gap-1">
+                     <p style={{ 'color': "#A5AAB4", "fontSize": "16px", "fontFamily": "Noto Sans", "fontWeight": "500" }} className="m-0">На основе:</p>
+                     <img src={bank} alt="" />
+                  </div>
+               </div>
                <div className="row  justify-content-center ">
                   <div className="col-xl-6 col-lg-6 col-md-6 col-sm-10 col-11">
                      <CurrencyCard className='mt-3'>
@@ -502,7 +552,7 @@ const Home = () => {
          </div >
          <div className="py-5 bg-white">
             <div className="container">
-               <div className="d-flex justify-content-between">
+               <div className="d-flex justify-content-between dflexcategory align-items-center">
                   <h2 className='defaulth2'>Другие категории</h2>
                   <h4 className='allcategory'>Все категории</h4>
                </div>
@@ -515,6 +565,165 @@ const Home = () => {
                </div>
             </div>
          </div>
+         <div className="">
+
+            <div className="container">
+               <div className="bg-image" style={{
+                  "backgroundImage": `url(${dotss})`,
+                  "minHeight": "160px",
+                  "backgroundRepeat": "no-repeat"
+               }}>
+
+               </div>
+               <div className="row py-2 backgroundrow position-relative" style={{
+                  "backgroundImage": `url(${subs})`,
+                  "backgroundRepeat": "no-repeat",
+                  "backgroundPosition": "right"
+               }}>
+                  <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                     <AppStoreLayer>
+                        <h2 className='white-sm'>
+                           Загрузите приложение для
+                           своего устройства
+                        </h2>
+                        <p className='white-sm'>
+                           Приложение поддерживает системы iOS, Android.
+                        </p>
+                        <div className="d-flex gap-3 ">
+                           <img onClick={() => appClick()} src={appstore} alt="" />
+                           <img onClick={() => googleClick()} src={google} alt="" />
+
+                        </div>
+                     </AppStoreLayer>
+                  </div>
+                  <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
+                     <div>
+                        <img src={iphone2} alt="" className="img-fluid positioniphone" />
+                     </div>
+                  </div>
+
+               </div>
+               <div className="row py-5 align-items-center justify-content-center">
+                  <div className="col-xl-6 col-lg-6 col-md-10 col-sm-11 col-11 mt-2 paddingstore" style={{
+
+                  }}>
+                     <AppStoreCard>
+                        <div className="d-flex justify-content-between">
+                           <div className='icon'>
+                              <AiFillApple />
+                           </div>
+                           <div className='stars gap-1 d-flex'>
+                              <div>
+                                 <AiFillStar />
+                              </div>
+                              <div>
+                                 <AiFillStar />
+                              </div>
+                              <div>
+                                 <AiFillStar />
+                              </div>
+                              <div>
+                                 <AiFillStar />
+                              </div>
+                              <div>
+                                 <AiFillStar />
+                              </div>
+
+                           </div>
+                        </div>
+                        <div className="d-flex mt-5 align-items-end justify-content-between">
+                           <div className='reyting'>
+                              <p>Рейтинг в</p>
+                              <h5>App Store</h5>
+                           </div>
+                           <div className="reytingson">
+                              <h1>
+                                 4,6
+                                 <span>из 5</span>
+                              </h1>
+                           </div>
+                        </div>
+                     </AppStoreCard>
+                  </div>
+                  <div className="col-xl-6 col-lg-6 col-md-10 col-sm-11 col-11 mt-2 paddingstore" style={{
+
+                  }}>
+                     <AppStoreCard>
+                        <div className="d-flex justify-content-between">
+                           <div className='icon'>
+                              <FaGooglePlay />
+                           </div>
+                           <div className='stars gap-1 d-flex'>
+                              <div>
+                                 <AiFillStar />
+                              </div>
+                              <div>
+                                 <AiFillStar />
+                              </div>
+                              <div>
+                                 <AiFillStar />
+                              </div>
+                              <div>
+                                 <AiFillStar />
+                              </div>
+                              <div>
+                                 <AiFillStar />
+                              </div>
+
+                           </div>
+                        </div>
+                        <div className="d-flex mt-5 align-items-end justify-content-between">
+                           <div className='reyting'>
+                              <p>Рейтинг в</p>
+                              <h5>Google Play</h5>
+                           </div>
+                           <div className={"reytingson"}>
+                              <h1>
+                                 4,8
+                                 <span>из 5</span>
+                              </h1>
+                           </div>
+                        </div>
+                     </AppStoreCard>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div className='bg-white py-5' id="section">
+            <div className="container">
+               <DefaultH2 className='pb-2'>
+                  Новости
+               </DefaultH2>
+
+               <div className="row justify-content-center align-items-center">
+                  {
+                     paymentcards.map((e, i) => <div className='col-xl-3 mt-3 col-lg-4 col-md-6 col-sm-8 col-10' key={i}>
+                        <LimonCards>
+                           <img className='img-fluid' src={e.image} alt="" />
+                           <div className="px-3">
+                              <h4>{e.title}</h4>
+                              <p className='desc'>
+                                 {e.desc}
+                              </p>
+                              <p className='date'>
+                                 {e.date}
+                              </p>
+                           </div>
+                        </LimonCards>
+                     </div>)
+                  }
+
+               </div>
+            </div>
+         </div>
+         <div className="py-5">
+            <div className="container">
+               <DefaultH2 className='mb-4'>Партнеры</DefaultH2>
+            </div>
+            <Partners />
+         </div>
+         <Footer />
       </>
    )
 }

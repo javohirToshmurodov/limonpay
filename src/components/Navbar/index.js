@@ -29,6 +29,12 @@ const Header = () => {
          route: "partner"
       },
    ]
+   const appClick = () => {
+      window.open("https://www.apple.com/ru/app-store/")
+   }
+   const googleClick = () => {
+      window.open("https://play.google.com/store/games?hl=ru&gl=US")
+   }
    return (
       <div>
          <Navbar className='py-4' style={{ "background": "#17171C" }} expand="lg">
@@ -50,7 +56,7 @@ const Header = () => {
                </Navbar.Toggle>
                {/* <Navbar.Collapse id="basic-navbar-nav"> */}
                <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="gap-3 d-flex justify-content-center w-75">
+                  <Nav className="gap-3 d-flex justify-content-center w-100 align-items-center py-2">
                      {
                         menu.map((e, i) => <NavLink style={({ isActive }) =>
                            isActive ? activeStyle : undefined
@@ -60,9 +66,9 @@ const Header = () => {
                      }
                   </Nav>
 
-                  <div className="d-flex gap-3">
-                     <img src={appstore} alt="" />
-                     <img src={google} alt="" />
+                  <div className="d-flex gap-3 justify-content-center">
+                     <img style={{ "cursor": "pointer" }} onClick={() => appClick()} src={appstore} alt="" />
+                     <img style={{ "cursor": "pointer" }} onClick={() => googleClick()} src={google} alt="" />
 
                   </div>
                </Navbar.Collapse>

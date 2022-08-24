@@ -404,3 +404,216 @@ transition: all .4s ease-in-out;
    color: #17171C;
 }
 `
+export const AuthWrapper = styled.div`
+.russkiy{
+   font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+color: #A5AAB4;
+}
+
+`
+export const AuthFormWrapper = styled.div`
+.settingsline{
+border-radius: 8px;
+width: 88px;
+height: 4px;
+transition: .3s;
+}
+.forgotform {
+   button{
+      width: 189px !important;
+   }
+   .disabledbutton{
+   background: #EBEDF1;
+   border-radius: 6px;
+   padding: 10px;
+   font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+width: 189px !important;
+font-size: 14px;
+line-height: 23px;
+text-align: center;
+cursor: pointer;
+color: #A5AAB4;
+   }
+   .forgotbutton{
+      background: #FFC007;
+   border-radius: 6px ;
+   }
+}
+.label{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+color: #2B2B30
+}
+
+.p{
+   font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+text-align: center;
+color: #A5AAB4;
+}
+.form{
+   .confirmationButton{
+   background: #FFC007;
+border-radius: 6px;
+padding: 12px 22px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 26px;
+display: flex;
+align-items: flex-end;
+color: #FFFFFF;
+border: none;
+margin: 0 auto
+}
+.label{
+   
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+color: #2B2B30;
+}
+.confirmationinput{
+background: #F3F5F8;
+width: 60px;
+height: 60px;
+border: 1px solid #FFFFFF;
+border-radius: 6px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 36px;
+text-align: center;
+color: #17171C;
+transition: all .2s ease;
+outline: none;
+
+&:focus{
+   border: 2px solid #32B141;
+}
+}
+}
+min-height: calc(100vh - 80px);
+h1{
+   font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 39px;
+text-align: center;
+color: #2B2B30;
+}
+h2{
+   font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 31px;
+text-align: center;
+
+color: #181C32;
+
+}
+p{
+   font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+color: #A5AAB4;
+
+}
+.input{
+   background: #F3F5F8;
+border: 1px solid #FFFFFF;
+border-radius: 6px;
+outline: none;
+width: 390px;
+height: 43px;
+padding: 10px 16px;
+&::placeholder{
+   font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 23px;
+color: #A5AAB4;
+
+}
+}
+form{
+   .eyes{
+      position: absolute;
+      right: 4%;
+      bottom: 18%;
+      font-size: 20px;
+      color: #A5AAB4;
+      cursor: pointer;
+   }
+   .forgotpassword{
+      font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 17px;
+color: #32B141;
+margin-top: 12px;
+   }
+   button{
+      background: #FFC007;
+border-radius: 6px;
+padding: 10px 20px;
+width: 100%;
+border: none;
+color: white;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 23px;
+   }
+}
+.loggedlabel{
+   font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 17px;
+
+color: #A5AAB4;
+}
+
+`
+export const AuthLinks = styled.div`
+padding-bottom:32px;
+p{
+   
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+color: #32B141;
+
+}
+`
+export const ConfirmationWrapper = styled.div`
+
+`

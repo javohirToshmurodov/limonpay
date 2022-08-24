@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AboutBtn, AboutH1, AboutWrapper } from '../../styles'
 import olma from "../../assets/images/olma.png"
 import { ImQuotesLeft } from "react-icons/im"
 import Footer from '../../components/Footer'
+import { useLocation } from 'react-router-dom'
+import Header from '../../components/Navbar'
 const About = () => {
+
    return (
       <>
+         {/* <Header /> */}
          <div className='py-5'>
             <div className="container bg-white p-4 pe-0" style={{
                "borderRadius": "12px"

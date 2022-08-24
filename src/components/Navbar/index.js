@@ -1,19 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import logo from "../../assets/images/logo.svg"
 import appstore from "../../assets/images/appstore.svg"
 import google from "../../assets/images/googleplay.svg"
 import { FaBars } from "react-icons/fa"
 const Header = () => {
    const navigate = useNavigate()
+   const location = useLocation()
+   const [classname, setclassname] = useState("navbarstyle")
+   useEffect(() => {
+      if (location.pathname === "/about") {
+      } else {
+         console.log(false);
+      }
+   }, [])
    let activeStyle = {
       color: "#FFC007",
    };
 
-   let activeClassName = "underline";
    const menu = [
 
       {

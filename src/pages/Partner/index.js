@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from '../../components/Navbar'
 
 const Partner = () => {
    return (
-      <div>Partner</div>
+      <div>
+         {/* <Header /> */}
+         Partner
+      </div>
    )
 }
 

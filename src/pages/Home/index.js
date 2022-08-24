@@ -33,6 +33,7 @@ import card1 from "../../assets/images/card1.svg"
 import Partners from '../../components/Partners'
 import Footer from '../../components/Footer'
 import bank from "../../assets/images/bank.svg"
+import Header from '../../components/Navbar'
 const Home = () => {
    const { One, Two, Three } = images
    const { Card1, Card2, Card3, Card4 } = cardimages
@@ -121,6 +122,8 @@ const Home = () => {
    }
    return (
       <>
+         {/* <Header /> */}
+
          <div className='homebackground' style={{
             "background": "#17171C",
             "backgroundImage": `url(${dots}), url(${halfcircle})`,

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 body {
   margin: 0;
   font-family: 'Space Grotesk', sans-serif;
@@ -153,9 +154,62 @@ background: #FFC007;
 background: rgba(255, 192, 7, 0.5);
 border-radius: 16px;
 }
+.categoryline{ 
+background: #32B141;
+border-radius: 20px;
+width: 20px;
+height: 3px;
+position: absolute;
+bottom: 0; 
+left: 44%
 
+}
+/* auth */
+.collimon{
+  position: relative;
+  padding: 0 !important;
+}
+.collimon::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+background-color: #17171C;
+opacity: 0.7;
+/* mix-blend-mode: multiply; */
+}
+.collimon .authInfo{
+   min-height: calc(100vh - 70px);
+   z-index: 100;
+   position: absolute;
+   top:10%;
+}
+.authInfo h2{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height:39px;
+text-align: center;
+letter-spacing: -0.03em;
+color: #FFFFFF;
+}
+.authInfo p span{
+  color: #FCBE1D;
+}
+.authInfo p{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+text-align: center;
+color: #FFFFFF;
+}
 /* not found  */
-@media (min-width:774px) and (max-width:1000px) {
+@media (min-width:774px) and (max-width:990px) {
   .margintopmedia{
     margin-top: 16px;
   }
@@ -164,6 +218,9 @@ border-radius: 16px;
  } 
  .white-sm{
   color: white !important;
+ }
+ .collimon{
+  display: none !important;
  }
 }
 
@@ -198,7 +255,11 @@ border-radius: 16px;
     justify-content: center !important;
     display: flex;
    }
+   .collimon{
+    display: none !important;
+   }
 }
+
 
 @media (min-width:0px) and (max-width:475.9px) {
   .notfoundd-flex{
@@ -231,5 +292,8 @@ border-radius: 16px;
    .justifycontentcenterfooter{
     justify-content: center !important;
     display: flex;
+   }
+   .collimon{
+    display: none !important;
    }
 }
